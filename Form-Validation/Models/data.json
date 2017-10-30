@@ -1,0 +1,8 @@
+[
+    
+    { "userName" : "jack" , "userAge" : 22 , "userEmail" : "jack@test.com"},
+    { "userName"  : "jill" , "userAge" : 28 , "userEmail" : "jill@test.com"},
+    { "userName"  : "james" , "userAge" : 29 , "userEmail" : "james@test.com"}
+    
+    
+]
