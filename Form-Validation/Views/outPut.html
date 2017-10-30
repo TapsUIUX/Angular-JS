@@ -1,0 +1,16 @@
+<table class="table table-bordered  ">
+    <thead >
+        <tr class="info">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="rows in dataSet track by $index">
+           <td>{{rows.userName}}</td>
+           <td>{{rows.userAge}}</td>
+           <td>{{rows.userEmail}}</td>            
+        </tr>
+    </tbody>
+</table>
