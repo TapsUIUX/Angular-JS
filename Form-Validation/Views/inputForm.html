@@ -1,0 +1,56 @@
+<form name="inputForm" class="form-group panel panel-primary clearfix " ng-submit="inputForm.$valid && addData(formObj,inputForm)" novalidate >
+
+    <div class="panel panel-heading text-center">
+        <h3>Howdy!</h3>
+    </div>
+
+    <div class="col-sm-12">
+
+        <div class="form-group">
+
+            <label for="userName">Username</label>
+            <input type="text" name="userName" class="form-control" ng-model="formObj.userName" placeholder="Required" required maxlength="20" ng-pattern="/^[a-zA-Z0-9 \-_]*$/" autofocus>
+
+
+            <div class="help-block bg-warning text-center">
+                <p class="text-muted" ng-show="inputForm.userName.$error.required"> please enter username</p>
+                <p class="text-muted" ng-show=" !inputForm.userName.$error.required && inputForm.userName.$invalid">username should not contain special characters</p>
+            </div>
+
+        </div>
+
+ 
+        <div class="form-group">
+            <label for="userAge">Age</label>
+            <input type="number" name="userAge" class="form-control" ng-model="formObj.userAge" placeholder="Required" min=1 max=100 required integer>
+            
+             <div class="help-block bg-warning text-center">
+                <p class="text-muted " ng-show="inputForm.userAge.$error.required"> please enter Age</p>
+                <p class="text-muted" ng-show="!inputForm.userAge.$error.required && inputForm.userAge.$invalid">age must be between 1 and 100</p>
+            </div>
+             
+        </div>
+
+        <div class="form-group">
+            <label for="userEmail">Email</label>
+            <input type="email" name="userEmail" class="form-control" ng-model="formObj.userEmail" placeholder="Required" ng-pattern="/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,3}$/" required>
+            
+            <div class="help-block bg-warning text-center">
+                <p class="text-muted" ng-show="inputForm.userEmail.$error.required"> please enter Email</p>
+                <p class="text-muted" ng-show="!inputForm.userEmail.$error.required && inputForm.userEmail.$invalid">correct format abc@xyz.com</p>
+            </div>
+            
+        </div>
+
+        <div class="form-group clearfix">
+            <h4 ng-show="inputForm.$valid" class="pull-left text-success">Ready to go</h4>
+            <button class="btn btn-primary btn-lg pull-right" ng-disabled="inputForm.$invalid">Add</button>
+        </div>
+    </div>
+    
+<!--
+    <pre>{{inputForm.userName | json}}</pre>
+    <pre>{{inputForm | json}}</pre>
+-->
+ 
+</form>
