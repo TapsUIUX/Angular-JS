@@ -44,39 +44,6 @@ $scope.dataObjKey.forEach((el2,id2,arr2)=>{
 
 
 
-
-
-
-// $scope.dataObjKey.forEach((el2,id2,arr2)=>{
-//   $scope.dataObjVal.forEach((el3,id3,arr3)=>{
-//
-//   })
-// })
-
-// $scope.newObj = Object.values(response[0])
-// $scope.dataObjCat.push({'name':'a1'})
-// $scope.dataObjCat[0]["category"]="C1";
-//$log.info($scope.dataObjVal,$scope.dataObjKey,$scope.dataFormated)
-// response.forEach((el,id,arr)=>{
-//
-//   if($scope.dataObjCat.some((el2,id2,arr2)=>{
-//     return el.name==el2.name;
-//     $log.info(el.name,el2.name);
-//   })){
-//     $scope.dataObjCat[id][el.category]= el.amount;
-//       $log.info("yes",el)
-//   }
-// $log.info("obj",$scope.dataObjCat)
-//
-//
-//
-// })
-
-  //$log.info($scope.dataObjCat)
-
-
-
-
 // $log.info(response)
 },function(rejected){
 $log.info(rejected)});
